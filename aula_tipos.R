@@ -123,3 +123,164 @@ as.logical(c(-1, 0))
 x <- -1.3:3;x
 
 y <- as.character(x);y
+
+data.frame (foo = 6:9, bar = c (T, F, T, F))
+
+data.frame (idade = c(25, 36, 24, 33),
+            cliente = c(F, T, F, F),
+            row.names = c("Aline", "Bianca", "Carlos", "Daniel")
+           )
+
+x <- c (1, 2, NA, 10, 3)
+is.na(x)
+is.nan(x)
+
+x <- c (1, 2, NaN, NA, 4)
+is.na(x)
+
+is.nan(x)
+
+x <- 1:3; x;
+
+names(x) <- c("ana", "beatriz", "carlos")
+x;
+x['ana']
+
+factor (c(1, 2, 4))
+?factor
+y <- list (digitos = 0:9, letras = c('a', 'b', 'c'), letras = c("a", "b", "c"), alternativas = c("V", "F"))
+y
+
+vector (mode = "numeric", length=10)
+
+vector (length = 8, mode = "integer")
+
+vector ("logical", length = 5)
+
+m <- matrix (nrow = 2, ncol = 3);
+m;
+
+dim(m);
+
+attributes(m);
+
+matrix (data = 2, nrow = 2, ncol = 3);
+
+matrix (data = 1:2, nrow = 2, ncol = 3)
+
+matrix (data = 1:3, nrow = 2, ncol = 3)
+
+
+matrix (data = 1:6, nrow = 2, ncol = 3)
+
+matrix (data = 1:2, nrow = 2, ncol = 3, byrow = TRUE);
+
+matrix (data = 1:6, nrow = 2, ncol = 3, byrow = TRUE);
+
+m <- 1:24; m;
+
+dim(m) <- c(4, 6)
+m;
+
+dim(m) <- c(2, 4, 3);
+m
+
+x <- 1:3
+y <- 7:9
+
+class(rbind(x, y))
+
+cbind(x, y)
+
+
+rbind (1:4, 5:8, 3:6)
+
+cbind (1:4, 5:8, 3:6)
+
+x <- 1:3;
+y <- 9:6;
+z <- 4:5;
+rbind(x, y)
+
+x <- 1:3; y <- 9:6; z <- 4:5;
+cbind (x, y, z)
+
+a <- matrix (data = 1:6, nrow = 2, ncol = 3);a;
+#linha 1
+a[1,]
+#coluna 1
+a[,1]
+a[1, 2]
+#linha 1, coluna 2
+rbind(a, a)
+
+
+cbind(a, a)
+
+
+list ("a", 2.3, FALSE)[2]
+
+list (c(FALSE, 2), matrix(ncol = 3, nrow = 2), list ("b", 3:5))
+
+
+factor (c("yes", "yes", "no", "yes", "no", "true"))
+
+factor (c ("M", "F", "F"))
+
+
+factor (c ("M", "G", "G", "P", "G", "M"), levels = c("M", "P", "G"), ordered = TRUE)
+
+
+name <- c ("Alice", "Bob", "Julia")
+age <- c (19, 21, 20)
+dados <- data.frame (nome = name, idade = age, stringsAsFactors = TRUE);
+dados;
+dados[,1]
+dados[[1]]
+dados[[1]]
+
+dados
+dados[,1]
+
+cliente <- c(T, F, T)
+dados <- cbind (dados, cliente);
+dados
+
+jack <- data.frame (nome = "Jack", idade = 22, cliente = F);
+jack
+
+dados <- rbind (dados, jack); dados;
+
+data.frame (foo = 6:9, bar = c(T, F, T, F))
+
+
+data.frame (
+            idade = c(25, 36, 24, 33), 
+            cliente = c(F, T, F, F),
+            row.names = c ("Aline", "Bianca", "Carlos", "Daniel")
+           )
+
+x <- c (1, 2, NA, 10, 3)
+is.na(x)
+
+is.nan(x)
+
+x <- c(1, 2, NaN, NA, 4)
+is.na(x)
+is.nan(x)
+
+x <- 1:3;x;
+
+names (x) <- c("ana", "beatriz", "carlos")
+
+y <- list (digitos = 0:9, letras = c ("a", "b", "c"), alternativas = factor(c("V", "F")))
+y
+y$alternativas
+
+names(y)
+
+
+m <- matrix (1:12, nrow = 3, ncol = 4);m
+
+dimnames(m) <- list (c ("SP", "RJ", "MG"), c ("A", "B", "C", "D"))
+m
